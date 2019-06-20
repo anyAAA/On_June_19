@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>循环语句之while语句 do while</title>
+
+
+<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="demo01.html">demo01</a></li>
+		<li><a href="demo02.html">demo02</a></li>
+		<li><a href="demo03.html">demo03</a></li>
+		<li><a href="function/f01.html">function/f01.html</a></li>
+		<li><a href="function/f02.html">function/f02.html</a></li>
+		<li><a href="function/f03.html">function/f03.html</a></li>
+	</ul>
+
+
+    <script>
+        /*
+        var year = 1;
+        while (year <= 5) {
+            console.log("春天");
+            console.log("夏天");
+            console.log("秋天");
+            console.log("冬天");
+            year++;
+        }
+        console.log(year);   //6
+        */
+        //
+        //打印 1-100数字
+        /*
+        var num = 1;
+        while (num <= 100) {
+            console.log(num)
+            num++;
+        }
+        */
+        // 打印1-100之间的奇数
+        var num = 1;
+        while (num <= 100) {
+            if (num % 2 == 1) {
+                console.log(num)
+            }
+            num++;
+        }
+        // 打印奇数 方法2
+        var num = 1;
+        while (num <= 100) {
+            console.log(num)
+            num = num + 2;
+        }
+        // 打印奇数 方法3
+        var num = 1;
+        var i = 0;
+        while (i < 50) {
+            num = i++ * 2 + 1;
+            console.log(num);
+        }
+
+        //
+        //
+        //
+        // do while
+        var num = 1;
+        do {
+            console.log(num);
+            num++;
+
+        } while (num <= 100);
+
+
+    </script>
+</body>
+
+</html>
