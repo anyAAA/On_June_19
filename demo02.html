@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for 循环 continue与break的区别</title>
+
+<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="demo01.html">demo01</a></li>
+		<li><a href="demo02.html">demo02</a></li>
+		<li><a href="demo03.html">demo03</a></li>
+		<li><a href="function/f01.html">function/f01.html</a></li>
+		<li><a href="function/f02.html">function/f02.html</a></li>
+		<li><a href="function/f03.html">function/f03.html</a></li>
+	</ul>
+
+    <script>
+
+        for (var a = 1; a <= 100; a++) {
+            console.log(a);
+        }
+
+        for (var i = 1; i <= 10; i++) {
+            if (i == 3) {
+                continue;
+            }
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

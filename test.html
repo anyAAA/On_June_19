@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+
+<body>
+    <script>
+        var jisuan = 0;
+        for (var i = 1; i <= 100; i++) {
+            // var c2jisuan = i * 2;
+            // jisuan += 1 / c2jisuan;
+            jisuan += 1 / (i * 2);
+        }
+        document.write(jisuan + "<br>");
+
+        var zong = 0;
+        for (var i = 1, x = 1, y = 2; i <= 100; i++) {
+            zong = zong + x / y;
+            y += 2;
+        }
+        document.write(zong + "<br>");
+
+        var a = 1;
+        var b = 2;
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum = sum + 1 / (i * b);
+        }
+        document.write(sum);
+
+    </script>
+</body>
+
+</html>

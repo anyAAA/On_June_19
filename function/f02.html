@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于函数的练习：求黄金分割数列</title>
+
+<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li><a href="../demo01.html">demo01</a></li>
+		<li><a href="../demo02.html">demo02</a></li>
+		<li><a href="../demo03.html">demo03</a></li>
+		<li><a href="f01.html">function/f01.html</a></li>
+		<li><a href="f02.html">function/f02.html</a></li>
+		<li><a href="f03.html">function/f03.html</a></li>
+	</ul>
+	
+    <input type="text" value="2019" id="bte">
+    <input type="button" value="Click" id="bbt">
+    <script>
+        /*
+        黄金分割数列  1 1 2 3 5 8 13 21  n
+        */
+        function shulie(n) {
+            var qian1 = 1, qian2 = 1, nzhi;
+
+            if (n == 1 || n == 2) {
+                nzhi = 1;
+
+            } else {
+                for (var i = 3; i <= n; i++) {
+                    nzhi = qian1 + qian2;
+                    qian2 = qian1;
+                    qian1 = nzhi;
+
+                }
+            }
+            return nzhi;
+        }
+        var ar = shulie(8)
+        document.write(ar);
+
+        // 有一 分数序列，1/2,1/4,1/6,1/8 ....  求此数列前n项的和  请编写一个函数实现此功能;
+        function shulie(n) {
+            var jisuan = 0;
+            for (var i = 1; i <= n; i++) {
+                var c = i * 2;
+                jisuan += 1 / c;
+            }
+            return jisuan;
+        }
+        var a = shulie(2);
+        document.write(a);
+
+
+        // 判断一个数是否为质数  请编写一个函数实现此功能
+
+
+        function iszhi(n) {
+            // n用来存 我们想判断的那个数
+            var iszhi = true; //iszhi  解释：是否是质数
+            if (n <= 1) {
+                iszhi = false;
+            } else if (n > 2) {
+                // iszhi = true 质数 ; iszhi = false 不是质数
+                for (var i = 2; i < n; i++) {
+                    //  2 3 4 5
+                    // 我们需要判断 非质数的特点，就是在循环的i中，n % i(i代表的数很多)等于0，这个时候我们就可以判断出此数是非质数
+                    if (n % i == 0) {
+                        iszhi = false;
+                        // console.log(i);
+                        // console.log("非质数");
+                        break;
+                    }
+                }
+            }
+            return iszhi;
+        }
+        var result = iszhi(8);
+        console.log(result);
+
+
+        // 请输出1-n之间所有的质数  请编写一个函数实现此功能
+
+
+
+
+        // 判断年份是否为闰年  400整除 或者 能被4整除 但不能被100整除的数   请编写一个函数实现此功能
+        bbt.onclick = function year() {
+            var i = Number(document.getElementById("bte").value);
+            var bbt = document.getElementById("bbt");
+
+
+            // for (var i = 1; i <= n; i++) {
+            // if(i%400==0;||(i%4==0 && i%100!==0)){
+            //     console.log("闰年")
+            // }else{
+            //     console.log("平年")
+            // }
+
+            if (i % 400 == 0) {
+                console.log("闰年");
+            } else if (i % 4 == 0 && i % 100 !== 0) {
+                console.log("闰年");
+            } else {
+                console.log("平年");
+            }
+        }
+        // return n;
+        // }
+        // var shuchu = year(1000);
+        // document.write(shuchu);
+
+
+        // 实现一个 加减法 运算器
+
+        // 在f03.html
+    </script>
+
+</body>
+
+</html>
